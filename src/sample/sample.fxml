@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" prefHeight="776.0" prefWidth="990.0" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <Pane prefHeight="742.0" prefWidth="950.0">
+         <children>
+            <TextArea fx:id="detailedInfTextArea" editable="false" layoutX="277.0" layoutY="541.0" prefHeight="183.0" prefWidth="655.0" visible="false" />
+            <Button fx:id="showHideButton" layoutX="495.0" layoutY="472.0" mnemonicParsing="false" onAction="#onShowHideButtonClick" prefHeight="25.0" prefWidth="219.0" text="Показать подробную информацию" />
+            <Label layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="51.0" text="Путь 1-2" />
+            <Label layoutX="14.0" layoutY="45.0" prefHeight="17.0" prefWidth="51.0" text="Путь 1-3" />
+            <Label layoutX="14.0" layoutY="76.0" prefHeight="17.0" prefWidth="51.0" text="Путь 1-4" />
+            <Label layoutX="14.0" layoutY="107.0" prefHeight="17.0" prefWidth="51.0" text="Путь 1-5" />
+            <Label layoutX="14.0" layoutY="138.0" prefHeight="17.0" prefWidth="51.0" text="Путь 2-3" />
+            <Label layoutX="14.0" layoutY="170.0" prefHeight="17.0" prefWidth="51.0" text="Путь 2-4" />
+            <Label layoutX="14.0" layoutY="201.0" prefHeight="17.0" prefWidth="51.0" text="Путь 2-5" />
+            <Label layoutX="14.0" layoutY="232.0" prefHeight="17.0" prefWidth="51.0" text="Путь 3-4" />
+            <Label layoutX="14.0" layoutY="263.0" prefHeight="17.0" prefWidth="51.0" text="Путь 3-5" />
+            <Label layoutX="14.0" layoutY="294.0" prefHeight="17.0" prefWidth="51.0" text="Путь 4-5" />
+            <TextField fx:id="mutationChance" layoutX="162.0" layoutY="436.0" prefHeight="25.0" prefWidth="108.0" text="20" />
+            <ImageView fitHeight="449.0" fitWidth="655.0" layoutX="277.0" layoutY="16.0">
+               <image>
+                  <Image url="@../KommivoyajerMap.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="14.0" layoutY="344.0" prefHeight="17.0" prefWidth="102.0" text="Число поколений" />
+            <Label layoutX="14.0" layoutY="376.0" prefHeight="17.0" prefWidth="108.0" text="Размер популяции" />
+            <Label layoutX="14.0" layoutY="407.0" prefHeight="17.0" prefWidth="149.0" text="Количество скрещиваний" />
+            <Label layoutX="14.0" layoutY="440.0" prefHeight="17.0" prefWidth="124.0" text="Вероятность мутации" />
+            <TextField fx:id="crossNum" layoutX="162.0" layoutY="403.0" prefHeight="25.0" prefWidth="108.0" text="5" />
+            <TextField fx:id="populationNum" layoutX="162.0" layoutY="372.0" prefHeight="25.0" prefWidth="108.0" text="100" />
+            <TextField fx:id="genNum" layoutX="162.0" layoutY="340.0" prefHeight="25.0" prefWidth="108.0" text="500" />
+            <TextField fx:id="path34" layoutX="70.0" layoutY="290.0" prefHeight="25.0" prefWidth="200.0" text="89" />
+            <TextField fx:id="path24" layoutX="70.0" layoutY="259.0" prefHeight="25.0" prefWidth="200.0" text="19" />
+            <TextField fx:id="path23" layoutX="70.0" layoutY="228.0" prefHeight="25.0" prefWidth="200.0" text="12" />
+            <TextField fx:id="path14" layoutX="70.0" layoutY="197.0" prefHeight="25.0" prefWidth="200.0" text="15" />
+            <TextField fx:id="path13" layoutX="70.0" layoutY="166.0" prefHeight="25.0" prefWidth="200.0" text="41" />
+            <TextField fx:id="path12" layoutX="70.0" layoutY="134.0" prefHeight="25.0" prefWidth="200.0" text="14" />
+            <TextField fx:id="path04" layoutX="70.0" layoutY="103.0" prefHeight="25.0" prefWidth="200.0" text="8" />
+            <TextField fx:id="path03" layoutX="70.0" layoutY="72.0" prefHeight="25.0" prefWidth="200.0" text="25" />
+            <TextField fx:id="path02" layoutX="70.0" layoutY="41.0" prefHeight="25.0" prefWidth="200.0" text="10" />
+            <TextField fx:id="path01" layoutX="70.0" layoutY="10.0" prefHeight="25.0" prefWidth="200.0" text="5" />
+            <Label layoutX="14.0" layoutY="672.0" prefHeight="17.0" prefWidth="124.0" text="Кратчайший путь:" />
+            <TextField fx:id="shortcut" editable="false" layoutX="121.0" layoutY="668.0" prefHeight="25.0" prefWidth="149.0" />
+            <Button fx:id="startButton" disable="true" layoutX="52.0" layoutY="505.0" mnemonicParsing="false" onAction="#onStartButtonClick" text="Рассчитать кратчайший путь" />
+            <Button layoutX="52.0" layoutY="472.0" mnemonicParsing="false" onAction="#onSetValuesButtonClick" prefHeight="25.0" prefWidth="173.0" text="Установить значения" />
+            <Label fx:id="label01" layoutX="447.0" layoutY="95.0" text="0" />
+            <Label fx:id="label12" layoutX="736.0" layoutY="95.0" text="0" />
+            <Label fx:id="label04" layoutX="355.0" layoutY="303.0" text="0" />
+            <Label fx:id="label23" layoutX="825.0" layoutY="303.0" text="0" />
+            <Label fx:id="label34" layoutX="591.0" layoutY="440.0" text="0" />
+            <Label fx:id="label14" layoutX="517.0" layoutY="232.0" text="0" />
+            <Label fx:id="label02" layoutX="591.0" layoutY="183.0" text="0" />
+            <Label fx:id="label24" layoutX="640.0" layoutY="303.0" text="0" />
+            <Label fx:id="label03" layoutX="545.0" layoutY="303.0" text="0" />
+            <Label fx:id="label13" layoutX="668.0" layoutY="232.0" text="0" />
+            <TextField fx:id="shortcut1" editable="false" layoutX="121.0" layoutY="699.0" prefHeight="25.0" prefWidth="149.0" />
+            <Label layoutX="14.0" layoutY="703.0" prefHeight="17.0" prefWidth="124.0" text="Расстояние:" />
+            <Button layoutX="52.0" layoutY="541.0" mnemonicParsing="false" onAction="#onCleanFieldsButtonClick" prefHeight="25.0" prefWidth="173.0" text="Очистить значения" />
+            <Button layoutX="495.0" layoutY="505.0" mnemonicParsing="false" onAction="#onCleanFieldsButtonClick1" prefHeight="25.0" prefWidth="219.0" text="Очистить подробную информацию" />
+            <Line fx:id="line01" endX="220.0" layoutX="382.0" layoutY="97.0" rotate="-23.5" startX="-100.0" stroke="RED" strokeType="OUTSIDE" visible="false" />
+            <Line fx:id="line12" endX="220.0" layoutX="708.0" layoutY="97.0" rotate="23.2" startX="-100.0" stroke="RED" strokeType="OUTSIDE" visible="false" />
+            <Line fx:id="line04" endX="180.0" layoutX="313.0" layoutY="322.0" rotate="65.0" startX="-100.0" stroke="RED" strokeType="OUTSIDE" visible="false" />
+            <Line fx:id="line23" endX="185.0" layoutX="812.0" layoutY="320.0" rotate="115.1" startX="-100.0" stroke="RED" strokeType="OUTSIDE" visible="false" />
+            <Line fx:id="line34" endX="220.0" layoutX="545.0" layoutY="459.0" startX="-100.0" stroke="RED" strokeType="OUTSIDE" visible="false" />
+            <Line fx:id="line03" endX="425.0" layoutX="374.0" layoutY="319.0" rotate="29.8" startX="-100.0" stroke="RED" strokeType="OUTSIDE" visible="false" />
+            <Line fx:id="line24" endX="425.0" layoutX="512.0" layoutY="317.0" rotate="-29.8" startX="-100.0" stroke="RED" strokeType="OUTSIDE" visible="false" />
+            <Line fx:id="line02" endX="490.0" layoutX="410.0" layoutY="176.0" startX="-100.0" stroke="RED" strokeType="OUTSIDE" visible="false" />
+            <Line fx:id="line14" endX="320.0" layoutX="401.0" layoutY="241.0" rotate="-67.0" startX="-100.0" stroke="RED" strokeType="OUTSIDE" visible="false" />
+            <Line fx:id="line13" endX="320.0" layoutX="589.0" layoutY="240.0" rotate="67.3" startX="-100.0" stroke="RED" strokeType="OUTSIDE" visible="false" />
+            <Button layoutX="280.0" layoutY="10.0" mnemonicParsing="false" onAction="#onInfoButtonClick" prefHeight="25.0" prefWidth="25.0" text="i">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</VBox>
